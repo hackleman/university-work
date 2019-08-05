@@ -1,6 +1,7 @@
 def mergeSort(arr):
+    
     if len(arr) == 1:
-        return arr, 0
+        return arr
     else:
         a = arr[:int(len(arr)/2)]
         b = arr[int(len(arr)/2):]
@@ -10,8 +11,7 @@ def mergeSort(arr):
         c = []
         i = 0
         j = 0
-        inversions = 0 + ai + bi
-        print(a, b, c, inversions)
+
         while i < len(a) and j < len(b):
             if a[i] < b[j]:
                 c.append(a[i])
@@ -23,8 +23,8 @@ def mergeSort(arr):
                 inversions += (len(a) - i)
         c += a[i:]
         c += b[j:]
-        print(a, b, c, inversions)
-    return c, inversions
+
+    return c
 
 arr = [6, 5, 4, 3, 2, 1]
 
